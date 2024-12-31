@@ -14,10 +14,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22.x
+      - run: shellcheck **/*.sh
       - run: npm ci
       - run: npm run lint
       - run: npm run docs:diff
-      - run: shellcheck **/*.sh
 
   test:
     runs-on: ubuntu-latest
