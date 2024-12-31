@@ -15,6 +15,7 @@ jobs:
         with:
           node-version: 22.x
       - run: shellcheck **/*.sh
+      - run: find . -name '*.sh' -print0 | xargs -0 shellcheck -x
       - run: npm ci
       - run: npm run lint
       - run: npm run docs:diff
