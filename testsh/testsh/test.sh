@@ -1,0 +1,5 @@
+
+
+TEST="aa"
+
+echo $TEST
